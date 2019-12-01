@@ -1,0 +1,24 @@
+---
+---
+
+{% include header.html %}
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            Element of Surpr<b>i</b>se
+        </div>
+        <div class="small"><i>Blog By 42yeah</i></div>
+        {% include bar.html %}
+        <div class="posts">
+            <div class="grids">
+                {% for post in site.posts %}
+                <a class="grid" href="{{ post.url }}">
+                    <img src="{{ post.featured }}" class="grid-featured-image">
+                    <h3 class="grid-title">{{ post.title }}</h3>
+                </a> 
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

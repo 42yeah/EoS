@@ -145,7 +145,7 @@ img {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 456px) {
     .jumbotron {
         font-size: 4em;
     }

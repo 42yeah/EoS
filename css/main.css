@@ -145,6 +145,12 @@ img {
     }
 }
 
+@media screen and (max-width: 400px) {
+    .jumbotron {
+        font-size: 4em;
+    }
+}
+
 .small {
     text-align: center;
     font-size: 0.9em;

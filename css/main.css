@@ -32,6 +32,16 @@
     }
 }
 
+@keyframes hopping {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #60a0b0; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
@@ -124,6 +134,15 @@ img {
     text-align: center;
     font-size: 5em;
     margin: 12% 0 12% 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 949px) {
+    .jumbotron {
+        display: block;
+    }
 }
 
 .small {
@@ -166,10 +185,6 @@ img {
     color: #000000;
 }
 
-.posts {
-
-}
-
 .grids {
     margin-top: 2em;
     display: flex;
@@ -181,7 +196,7 @@ img {
 .grid {
     box-shadow: 0 0 3px 0 #d3d3d355;
     padding: 1em;
-    transition: 1.0s all;
+    transition: 1.0s all cubic-bezier(1, 0, 0, 1);
     user-select: none;
     position: relative;
     width: calc(33% - 1em - 20px);
@@ -304,4 +319,8 @@ img {
 .contact:active {
     border: 1px solid #a1a1a1;
     color: #000;
+}
+
+.hopping {
+    animation: hopping both infinite alternate 1.0s cubic-bezier(1, 0, 0, 1);
 }

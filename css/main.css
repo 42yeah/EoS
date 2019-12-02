@@ -246,7 +246,7 @@ img {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 120%;
+    width: auto;
     height: auto;
     /* min-width: 100%; */
     min-height: 10em;

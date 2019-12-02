@@ -354,3 +354,93 @@ img {
 .actual-content img {
     width: 100%;
 }
+
+.codemirror-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px #e3e3e3 solid;
+}
+
+.codepad-title {
+    border-bottom: 1px solid #e3e3e3;
+    font-weight: bold;
+    padding: 0.5em 0.5em;
+    user-select: none;
+}
+
+.codepad-actions {
+    margin-top: 1px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.codepad-action {
+    display: block;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+    user-select: none;
+    cursor: default;
+    margin: -1px;
+    width: 100%;
+    text-align: center;
+}
+
+.codepad-action:not(first-of-type) {
+    border-left: 1px solid #e4e4e4;
+}
+
+.codepad-action:not(.codepad-action__active) {
+    background-color: #e3e3e322;
+}
+
+.codepad-action:hover {
+    background-color: #1299f30e;
+    font-weight: normal;
+}
+
+.codepad-action:active {
+    background-color: #418abb;
+    color: white;
+    z-index: 3;
+}
+
+.codepad-action.codepad-action__active {
+    border-top: 1px solid transparent;
+}
+
+.codepad-swooper-frame {
+    overflow-x: hidden;
+}
+
+.codepad-swooper {
+    display: flex;
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.codepad-swooper-item {
+    min-width: 100%;
+}
+
+.codepad-swooper-item__tenny-tiny-padding {
+    padding: 1em;
+}
+
+.width-unset {
+    width: unset;
+}
+
+.alt-font-size {
+    font-size: 0.9em;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.fill-up {
+    width: 100%;
+    height: 100%;
+}

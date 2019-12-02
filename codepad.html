@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Frame of 42yeah | {{ page.title }}</title>
+    <title>Frame of 42yeah | CodePad</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/codemirror.css">
     <link rel="icon" type="image/png" href="/assets/favicon.png">
@@ -16,13 +16,8 @@
     <div class="container">
         <h2><a href="/">Frame of <b>4</b>2yeah</a></h2>
         {% include bar.html %}
-        <div class="article">
-            <img src="{{ page.featured }}" class="featured">
-            <div class="actual-content">
-                <h1>{{ page.title }}</h1>
-                {{ content }}
-            </div>
-        </div>
+        <h2>Here's one CodePad, at your disposal.</h2>
+        {% include codepad.html %}
     </div>
     <script src="/js/blog.js"></script>
     <script src="/js/codemirror.js"></script>

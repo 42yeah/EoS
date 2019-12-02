@@ -1,0 +1,39 @@
+<div class="codemirror-wrapper">
+    <div class="codepad-title">CODEPAD</div>
+    <div class="codepad-swooper-frame">
+        <div class="codepad-swooper">
+            <div data-type="code" class="codepad-swooper-item">
+                <textarea>"use strict";</textarea>
+                <script>
+                    // lazy init script list
+                    if (typeof canvasScriptList == "undefined") { var canvasScriptList = []; }
+                    canvasScriptList.push(document.currentScript);
+                </script>
+            </div> 
+            <div data-type="run" class="codepad-swooper-item overflow-scroll">
+                <div class="codepad-swooper-item__tenny-tiny-padding">
+                </div>
+            </div>
+            <div data-type="canvas" class="codepad-swooper-item">
+                <canvas class="fill-up"></canvas>
+            </div>
+            <div data-type="help" class="codepad-swooper-item">
+                <div class="codepad-swooper-item__tenny-tiny-padding">
+                    <div class="small">CodePad Help</div>
+                    <div class="contact-list">
+                        <div class="contact width-unset alt-font-size">Use `log(...)` to log stuffs to the output window.</div>
+                        <div class="contact width-unset alt-font-size">Use `canvas` to access the canvas (if it exists).</div>
+                        <div class="contact width-unset alt-font-size">Use `ctx` to access the canvas' 2D context (if it exists).</div>
+                        <div class="contact width-unset alt-font-size">Whenever you press "run" or "canvas", the code will be rerun.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="codepad-actions">
+        <div data-type="code" class="codepad-action codepad-action__active" onclick="switchCodePadPanel(this, 'code')">Code</div>
+        <div data-type="run" class="codepad-action" onclick="switchCodePadPanel(this, 'run')">Run</div>
+        <div data-type="canvas" class="codepad-action" onclick="switchCodePadPanel(this, 'canvas')">Canvas</div>
+        <div data-type="help" class="codepad-action" onclick="switchCodePadPanel(this, 'help')">Help</div>
+    </div>
+</div>

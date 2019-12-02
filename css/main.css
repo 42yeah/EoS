@@ -254,7 +254,7 @@ img {
     min-height: 10em;
     max-width: unset;
     max-height: unset;
-    transition: 0.5s all ease-out;
+    transition: 0.5s all;
 }
 
 .grid:hover {

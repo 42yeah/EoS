@@ -347,3 +347,7 @@ img {
 .hopping {
     animation: hopping both infinite alternate 1.0s cubic-bezier(1, 0, 0, 1);
 }
+
+.actual-content img {
+    width: 100%;
+}

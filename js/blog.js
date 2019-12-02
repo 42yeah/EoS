@@ -57,11 +57,16 @@ function runCode(elem) {
     const out = gallery.querySelector("[data-type='run']").firstElementChild;
     const canvas = gallery.querySelector("[data-type='canvas']").firstElementChild;
     const ctx = canvas.getContext("2d");
-    out.innerHTML = "";
+    let terminalClean = true;
+    out.innerHTML = "<font style=\"color: #a1a1a1\">There is no actual output at this moment. Use log to barf stuffs into this terminal!</font><br />";
     ctx.fillStyle = "#000000";
     ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
     
     function log(...args) {
+        if (terminalClean) {
+            terminalClean = false;
+            out.innerHTML = "";
+        }
         for (let i = 0; i < args.length; i++) {
             out.innerHTML += "<font style=\"color: #676767\">&gt;&nbsp;" + args[i] + "</font><br />";
         }

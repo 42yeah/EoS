@@ -104,7 +104,7 @@
 .highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
 .highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */
 
-b {
+b, strong {
     color: #3f96ec;
 }
 
@@ -114,6 +114,15 @@ p {
 
 h1, h2, h3, h4, h5 {
     margin: 1em 0;
+}
+
+blockquote {
+    background-color: #0e83b523;
+    padding: 0.5em 1em;
+}
+
+blockquote * {
+    color: #031e29;
 }
 
 a:hover {
@@ -210,7 +219,7 @@ img {
     user-select: none;
     position: relative;
     width: calc(33% - 1em - 20px);
-    min-height: 10em;
+    height: 10em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,10 +245,10 @@ img {
     top: 0;
     right: 0;
     bottom: 0;
-    width: auto;
+    width: 120%;
     height: auto;
-    min-width: 100%;
-    min-height: 100%;
+    /* min-width: 100%; */
+    min-height: 10em;
     max-width: unset;
     max-height: unset;
     transition: 0.5s all;
@@ -260,7 +269,7 @@ img {
 }
 
 .grid:hover .grid-featured-image {
-    animation: zoom 1.0s forwards;
+    transform: scale(2.0);
 }
 
 .featured {

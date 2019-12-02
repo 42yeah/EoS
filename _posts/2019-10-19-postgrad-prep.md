@@ -1,7 +1,7 @@
 ---
 title: Postgrad Prep - UPDATING! (CN)
 layout: post
-featured: /assets/unsplash-ian dooley.jpg
+featured: /assets/unsplash-ian-dooley.jpg
 ---
 
 考研对于我来说，大概可以省去整个英语，做做题就可以了。但是数学和政治以及数据结构仍然不容小觑。所以以下就是我的准备：

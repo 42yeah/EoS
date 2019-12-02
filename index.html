@@ -12,7 +12,7 @@
             <div class="grids">
                 {% for post in site.posts %}
                 <a class="grid" href="{{ post.url }}">
-                    <img src="{{ post.featured }}" class="grid-featured-image">
+                    <img src="{{ post.featured }}" class="grid-featured-image" alt="{{ post.featured }}">
                     <h3 class="grid-title">{{ post.title }}</h3>
                 </a> 
                 {% endfor %}

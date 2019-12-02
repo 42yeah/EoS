@@ -8,4 +8,4 @@ function adjustImageAspect() {
     }
 }
 
-adjustImageAspect();
+window.addEventListener("load", adjustImageAspect);

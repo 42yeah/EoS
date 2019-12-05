@@ -16,4 +16,4 @@ I hope everything will work out alright! At least I am not gonna fail in the fir
 
 Wish me luck!
 
-Fun Fact: It is also abbravated as NPM.
+Fun Fact: It is also abbreviated as NPM.

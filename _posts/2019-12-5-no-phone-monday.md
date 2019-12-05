@@ -15,3 +15,5 @@ No Phone Monday is just as its name intended, that you play __no phone__ on Mond
 I hope everything will work out alright! At least I am not gonna fail in the first Monday, right?
 
 Wish me luck!
+
+Fun Fact: It is also abbravated as NPM.

@@ -104,6 +104,11 @@
 .highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
 .highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */
 
+pre {
+    overflow: scroll;
+    overflow-x: scroll;
+}
+
 b, strong {
     color: #3f96ec;
 }
@@ -118,7 +123,9 @@ h1, h2, h3, h4, h5 {
 
 blockquote {
     background-color: #0e83b523;
+    flex: 1;
     display: flex;
+    flex-direction: column;
     padding: 0.5em 1em;
 }
 
@@ -353,6 +360,12 @@ img {
 
 .actual-content img {
     width: 100%;
+}
+
+@media screen and (min-width: 950px) {
+    .actual-content {
+        max-width: 50%;
+    }
 }
 
 .codemirror-wrapper {

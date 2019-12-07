@@ -71,11 +71,14 @@ function runCode(elem) {
             out.innerHTML += "<font style=\"color: #676767\">&gt;&nbsp;" + args[i] + "</font><br />";
         }
     }
+    const nativeConsoleLog = console.log;
+    console.log = log;
     try {
         eval(edit.getValue());
     } catch (e) {
         out.innerHTML += "<font style=\"color: #a12321\">#&nbsp;" + e.toString() + "</font><br />";
     }
+    console.lpg = nativeConsoleLog;
 }
 
 window.addEventListener("load", () => {

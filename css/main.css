@@ -107,6 +107,7 @@
 pre {
     overflow: scroll;
     overflow-x: scroll;
+    margin: 0.5em 0;
 }
 
 b, strong {

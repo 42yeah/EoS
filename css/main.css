@@ -363,7 +363,7 @@ img {
     width: 100%;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1200px) {
     .actual-content {
         max-width: 50%;
     }

@@ -4,9 +4,9 @@ title: "Matrix: What The Hell?"
 featured: /assets/tyler-easton-faixctm2YRQ-unsplash.png
 ---
 
-Let's take a look at Linear Algebra. Too hard. Bye bye.
+Let's take a look at Linear Algebra. Too hard. Goodbye.
 
-__Just joking!__ Hahaha! Of course there is no detour. Youd have to learn it. So today let's review a few most basic matrix operations, in case I lost my memories.
+__Just joking!__ Hahaha! Of course there is no detour. You have to learn it. So today let's review a few most basic matrix operations, in case I lost my memories.
 
 ## Addition
 
@@ -24,8 +24,6 @@ $$
     C + G \ D + H
     \end{bmatrix} 
 $$
-
-That was straightforward.
 
 ## Subtraction
 

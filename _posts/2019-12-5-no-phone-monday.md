@@ -18,8 +18,8 @@ Wish me luck!
 
 Fun Fact: It is also abbreviated as NPM.
 
-===LOGBOOK===
-9/12/19: Clock in at 8:30 AM
-9/12/19: Clock out at 11:58 AM
-9/12/19: Clock in at 2:06 PM
-9/12/16: Clock out at 6:36 PM
+===LOGBOOK===  
+9/12/19: Clock in at 8:30 AM  
+9/12/19: Clock out at 11:58 AM  
+9/12/19: Clock in at 2:06 PM  
+9/12/16: Clock out at 6:36 PM  

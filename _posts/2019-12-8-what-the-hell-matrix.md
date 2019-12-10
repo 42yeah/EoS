@@ -78,6 +78,107 @@ As the basic vectors got swapped, we will see that what's the original component
 
 Well, that very much concludes the matrix multiplication. We should not understand it in a way where your left finger is moving left and your right finger moving down; nope. Understand it in this way! For this, I really appreciate [3b1b](https://www.3blue1brown.com/).
 
-## Unfinished!
+## Inverse!
 
-Aww! This is not done yet! I still gotta write about the inverse matrix. That's also kinda fun! But I don't really have much time now. So see you soon!
+Matrix inverse has always been brought forward by a very weird topic, which is solving multiple equations. Such as:
+
+$$
+    \begin{equation}
+        \begin{cases}
+        A_1x + B_1y + C_1z + \dots = \alpha \\
+        A_2x + B_2y + C_2z + \dots = \beta \\
+        A_3x + B_3y + C_3z + \dots = \gamma \\
+        \end{cases}
+    \end{equation}
+$$
+
+If one or more variable is lacking from one or more cases, just assume its coefficient is 0 (because it is). And then we can begin constructing it into our little matrix!
+
+As you might notice the pattern already, the coefficients could be easily formed into a matrix:
+
+$$
+    A = \begin{bmatrix}
+        A_1 \ A_2 \ A_3 \ \dots \ A_n \\
+        B_1 \ B_2 \ B_3 \ \dots \ B_n \\
+        C_1 \ C_2 \ C_3 \ \dots \ C_n \\
+        \dots \\
+        N_1 \ \dots \ \dots \ \dots \ N_n
+    \end{bmatrix}
+$$
+
+And so does the variable, it could be formed into a $$ N * 1 $$ vector just easily:
+
+$$
+    x = \begin{bmatrix}
+        x \\
+        y \\
+        z \\
+        \dots
+    \end{bmatrix}
+$$
+
+And the result, as well!
+
+$$
+    B = \begin{bmatrix}
+        \alpha \\
+        \beta \\
+        \gamma \\
+        \dots
+    \end{bmatrix}
+$$
+
+And now all of these becomes an __easy__ matrix multiplication!
+
+$$
+    Ax = B
+$$
+
+And we know that solve for $$x$$ exists if $$det(A) > 0$$.
+
+## Wait, what the hell is $$det$$?
+
+Oh yeah, sorry about that. $$det$$ stands for determinant, which in turn stands for the size ratio of the rectangle between scaled basic vector and the original basic vector.
+
+However, as this is about matrix, I am not gonna dive deep here. If you are interested, go to [here](https://www.youtube.com/watch?v=Ip3X9LOh2dk&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&index=6) to learn more. Please, knock yourself out.
+
+## Back to inverse matrix!
+
+As I was just sayin', solve for $$x$$ exists if and only if $$det(A) > 0$$. So how could we solve $$x$$? With this newly-introduced concept of matrix inverse, of course!
+
+As we all know, matrix could be transformed in this way:
+
+$$
+    AB = C
+$$
+
+So is there a way to __reverse__ this transformation?
+
+Turns out there are! And it is known by $$A^{-1}$$, which means $$A^{-1}C = B$$. It is also not hard to infer that $$E^{-1} = E$$, since $$EB = EC$$. It is thus could be inferred that $$A \cdot A^{-1} = E$$. Thus is how a very important equation borned:
+
+$$
+    \begin{align}
+        AB = C \\
+        A^{-1} \cdot AB = A^{-1} \cdot C \\
+        EB = A^{-1} \cdot C \\
+        B = A^{-1} \cdot C
+    \end{align}
+$$
+
+Applying to our equation above means:
+
+$$
+    \begin{align}
+        Ax = B \\
+        A^{-1} \cdot Ax = A^{-1} \cdot B \\
+        x = A^{-1} \cdot B
+    \end{align}
+$$
+
+... And that's how its done. The definition of inverse matrix. Have a lot of fun!
+
+## So much to do!
+
+There is still so much in the world of linear algebra! And as this thing is getting more and more gargantuan, I guess I am gonna stop right here. Ponder the wonder of algebra and eat an egg!
+
+See you!

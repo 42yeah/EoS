@@ -81,6 +81,14 @@ function runCode(elem) {
     console.lpg = nativeConsoleLog;
 }
 
+function addToBelow(code) {
+    const script = document.currentScript;
+    if (!script) { return; }
+    let div = document.createElement("div");
+    div.innerHTML = code;
+    script.parentNode.insertBefore(div, script);
+}
+
 window.addEventListener("load", () => {
     translateMathJax();
     codeMirrorify();

@@ -78,7 +78,7 @@ function runCode(elem) {
     } catch (e) {
         out.innerHTML += "<font style=\"color: #a12321\">#&nbsp;" + e.toString() + "</font><br />";
     }
-    console.lpg = nativeConsoleLog;
+    console.log = nativeConsoleLog;
 }
 
 function addToBelow(code) {

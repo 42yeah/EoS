@@ -2,6 +2,7 @@
 layout: post
 title: Solving Interesting Numbers
 featured: /assets/marvin-ronsdorf-sX9_SHIqH4w-unsplash.jpg
+draft: true
 ---
 
 Numbers are not interesting. Yet, __someone__ think that it is interesting to put a definition on __everything__. Today, let's take a look at this slightly annoying _Interesting Number_ puzzle.
@@ -36,5 +37,7 @@ Also, before you accidentally peek into the answer, please take a look at this b
 Alright. Now that you've tried (did ya?) and appreciated the flamingo (yeah you did), you must be eager to know the answer! Well me too! This puzzle is said to be easier if you know about [Dynamic Programming](https://en.wikipedia.org/wiki/Dynamic_programming) (aka DP). As Wikipedia said, it is both a mathematical optimization method and a computer programming method. It works by simplifying a complicated problem by breaking it down into simpler sub-problems in a recursive manner. Our puzzle could also be solved in this way.
 
 ## But how?
+
+Now that's a pretty good question. But first, let's look at it from a recursive angle:
 
 

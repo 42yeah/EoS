@@ -20,6 +20,8 @@ Of course, you need to have `Xcode` installed first. Or do you? Just joking! Hah
 
 ## After Catalina
 
+> I was wrong. The macOS `openssl` is still here after all. Please check the _ERRATA!_ section below.
+
 With this great update, the `openssl` library as we know seems to be gone forever from the default Xcode toolkit. But that's OK! We will just get it from `brew`. You must've installed that, right? Otherwise, you can get it from [here](https://brew.sh/).
 
 After that, you could just 
@@ -37,3 +39,19 @@ export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/Cellar/openssl/1.0.2t/lib
 The directory above might vary. I am just pointing it to the newest version in the time of the writing. But after this, you could continue to build your project! Have fun!
 
 Of course, this is a temporary solution. There might be a more permanent solution such as creating a symbolic link & add the `export` statement into your `.bashrc` or `.zshrc`, however they might not be very elegant. But at least the library now works as we know it, right?
+
+## ERRATA!
+
+So I was wrong; I didn't do too much research. Sorry. macOS still gets its `openssl` library, and it is right here: [/usr/local/opt/openssl](files:///usr/local/opt/openssl).
+
+So instead of 
+
+```sh
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/Cellar/openssl/1.0.2t/lib
+```
+
+you can just:
+
+```sh
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl
+```

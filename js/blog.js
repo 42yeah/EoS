@@ -89,6 +89,10 @@ function addToBelow(code) {
     script.parentNode.insertBefore(div, script);
 }
 
+function initGoogleTranslation() {
+    new google.translate.TranslateElement({ pageLanguage: "en" }, "googleTranslate");
+}
+
 window.addEventListener("load", () => {
     translateMathJax();
     codeMirrorify();

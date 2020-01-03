@@ -176,6 +176,7 @@ let vx, vy, vz;
 vx = rand() * 0.02;
 vy = rand() * 0.02;
 vz = rand() * 0.02;
+const canvas = document.querySelector("#logo");
 
 function animate() {
     const d2PiX = Math.abs((vx > 0 ? 1.0 : -1.0) * Math.PI * 2.0 - illo.rotate.x);
@@ -199,7 +200,6 @@ function animate() {
 // update & render
 requestAnimationFrame(animate);
 window.addEventListener("resize", () => {
-    const canvas = document.querySelector("#logo");
     illo.zoom = canvas.width / (816 * 2.0);
     illo.updateRenderGraph();
 });

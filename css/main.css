@@ -5,6 +5,10 @@
     color: #343434;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: Iosevka;
     src: url(/assets/iosevka-light.woff2);
@@ -155,10 +159,15 @@ img {
 .jumbotron {
     text-align: center;
     font-size: 5em;
-    margin: 2% 0 12% 0;
+    margin: 2% 0 2% 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    max-height: 7em;
+}
+
+.jumbotron > canvas {
+    max-height: 7em;
 }
 
 @media screen and (max-width: 949px) {
@@ -175,7 +184,7 @@ img {
 
 .small {
     text-align: center;
-    font-size: 0.9em;
+    font-size: 13px;
     color: #a1a1a1;
 }
 

@@ -197,6 +197,8 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
+illo.zoom = canvas.width / (816 * 2.0);
+
 // update & render
 requestAnimationFrame(animate);
 window.addEventListener("resize", () => {

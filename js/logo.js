@@ -197,11 +197,11 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-illo.zoom = canvas.width / (816 * 2.0) * 0.95;
+illo.zoom = canvas.width / (816 * 2.0) * 0.9;
 
 // update & render
 requestAnimationFrame(animate);
 window.addEventListener("resize", () => {
-    illo.zoom = canvas.width / (816 * 2.0) * 0.95;
+    illo.zoom = canvas.width / (816 * 2.0) * 0.9;
     illo.updateRenderGraph();
 });

@@ -468,6 +468,14 @@ img {
     height: 100%;
 }
 
+.mt-2 {
+    margin-top: 2em;
+}
+
+.footer-text {
+    color: #aaa;
+}
+
 /* === GOOGLE TRANSLATE WIDGET === */
 #googleTranslate img {
     width: unset;

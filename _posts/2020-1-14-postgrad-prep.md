@@ -11,7 +11,7 @@ featured: /assets/unsplash-ian-dooley.jpg
 ## 302 数学二
 
 - 视频：张宇的 高等数学
-- 习题：基础数学 660
+- 习题：基础数学 660 (正在执行)
 
 ## 101 思想政治理论
 
@@ -19,7 +19,7 @@ featured: /assets/unsplash-ian-dooley.jpg
 
 ## 914 数据结构（自命题）
 
-- [历代广州大学 914 真题和答案](http://www.gzhuky.com/kaoyan/details.aspx?id=2651)
+- [历代广州大学 914 真题和答案](http://www.gzhuky.com/kaoyan/details.aspx?id=2651) (购买中)
 
 ## 复试：C 程序设计
 

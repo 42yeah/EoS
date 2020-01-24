@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Learning WFC
-featured: 
+featured: /assets/wfc/wfc-rooms.png
 ---
 
 According to the [Official documentation](https://github.com/mxgmn/WaveFunctionCollapse), this should be how WaveFunctionCollapse works: 

@@ -82,6 +82,7 @@ function event(e) {
             break;
     }
     if (clicking) {
+        boundingRect = canvas.getBoundingClientRect();
         let height = canvasSize.y / (imageSize.y + 1);
         e.relativeX = (e.xx - boundingRect.left) * 2;
         e.relativeY = (e.yy - boundingRect.top) * 2;
@@ -127,7 +128,6 @@ window.addEventListener("load", () => {
     outCtx = outCanvas.getContext("2d");
     canvasSize = new Vec2(canvas.width, canvas.height);
     imageSize = new Vec2(12, 12);
-    boundingRect = canvas.getBoundingClientRect();
     canvas.addEventListener("mousedown", event);
     canvas.addEventListener("mousemove", event);
     canvas.addEventListener("mouseup", event);

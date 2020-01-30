@@ -57,19 +57,34 @@ function paint(e) {
 }
 
 function event(e) {
+    e.xx = e.clientX;
+    e.yy = e.clientY;
     switch (e.type) {
         case "mousedown":
+        case "touchstart":
             clicking = true;
+            console.log("STARTING");
             break;
 
         case "mouseup":
+        case "touchend":
+            console.log("END");
             clicking = false;
+            break;        
+    }
+
+    switch (e.type) {
+        case "touchstart":
+        case "touchmove":
+            e.preventDefault();
+            e.xx = e.touches[0].clientX;
+            e.yy = e.touches[0].clientY;
             break;
     }
     if (clicking) {
         let height = canvasSize.y / (imageSize.y + 1);
-        e.relativeX = (e.clientX - boundingRect.x) * 2;
-        e.relativeY = (e.clientY - boundingRect.y) * 2;
+        e.relativeX = (e.xx - boundingRect.left) * 2;
+        e.relativeY = (e.yy - boundingRect.top) * 2;
         if (e.relativeY >= canvasSize.y - height) {
             select(e);
         } else {
@@ -116,6 +131,10 @@ window.addEventListener("load", () => {
     canvas.addEventListener("mousedown", event);
     canvas.addEventListener("mousemove", event);
     canvas.addEventListener("mouseup", event);
+    canvas.addEventListener("touchstart", event);
+    canvas.addEventListener("touchend", event);
+    canvas.addEventListener("touchmove", event);
+    
     clear();
     document.querySelector("#generate").addEventListener("click", generate);
     document.querySelector("#clear").addEventListener("click", clear);

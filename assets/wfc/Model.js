@@ -3,11 +3,11 @@ import { Pattern } from "./Pattern.js";
 
 
 class Model {
-    constructor(map, n) {
+    constructor(map, N) {
         this.rawMap = map;
         if (map.length <= 0) { return; }
         this.mapSize = new Vec2(map[0].length, map.length);
-        this.N = n; // pattern size
+        this.N = N; // pattern size
         this.patterns = [];
     }
 

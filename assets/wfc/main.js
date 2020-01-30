@@ -17,6 +17,9 @@ let boundingRect = null;
 let outCtx;
 let outCanvas;
 
+let wfc;
+const size = new Vec2(48, 48);
+
 function clear() {
     ctx.fillStyle = "#000000";
     ctx.fillRect(0, 0, canvasSize.x, canvasSize.y);
@@ -86,11 +89,20 @@ function generate() {
         }
         map.push(rows);
     }
-    const model = new Model(map, 2);
+    const model = new Model(map, document.querySelector("#n").value);
     model.processPatterns();
 
-    const wfc = new WFC(model);
-    console.log(wfc);
+    wfc = new WFC(model);
+    wfc.init(size);
+    requestAnimationFrame(render);
+}
+
+function render() {
+    const res = wfc.step();
+    wfc.render(canvasSize.x / size.x, canvasSize.y / size.y, outCtx);
+    if (res == 0) {
+        requestAnimationFrame(render);
+    }
 }
 
 window.addEventListener("load", () => {

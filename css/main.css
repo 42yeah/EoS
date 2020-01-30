@@ -34,6 +34,21 @@ pre {
     overflow: scroll;
 }
 
+input {
+    border: 1px #eee solid;
+    padding: 0.5em;
+    font-family: "cmunrm", "Times New Roman", Times, "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+    font-size: 1em;
+}
+
+input:hover {
+    border: 1px #ccc solid;
+}
+
+input:focus {
+    outline: 0;
+}
+
 div.highlight {
     margin: 0 -50%;
     padding: 0 50%;
@@ -344,3 +359,4 @@ img {
         padding: 2em 10%;
     }
 }
+

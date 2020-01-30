@@ -15,9 +15,9 @@
     <script src="/js/blog.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h2><a href="/">Frame of <b>4</b>2yeah</a></h2>
-        {% include bar.html %}
+    <div class="centerify-container">
+        <div class="header">{{ page.title }}</div>
+        <div class="subheader"><a href="/">&lt;&lt; Home</a></div>
         <div class="article">
             <img src="{{ page.featured }}" class="featured">
             <div class="actual-content">
@@ -25,6 +25,18 @@
                 <div id="googleTranslate"></div>
                 {{ content }}
             </div>
+        </div>
+        <div class="next">
+            {% if page.previous.url %}
+            <div class="next__item">
+                <a href="{{ page.previous.url }}">Prev: {{ page.previous.title }}</a>
+            </div>
+            {% endif %}
+            {% if page.next.url %}
+            <div class="next__item">
+                <a href="{{ page.next.url }}">Next: {{ page.next.title }}</a>
+            </div>
+            {% endif %}
         </div>
         {% include footer.html %}
     </div>

@@ -3,25 +3,27 @@
 
 {% include header.html %}
 <body>
-    <div class="container">
-        <div class="jumbotron">
-            <canvas id="logo" class="fill-up"></canvas>
-        </div>
-        {% include bar.html %}
+    <div class="centerify-container">
+        <div class="header">Frame of 42yeah</div>
+        <div class="subheader">Yeah, I rewrote the blog again</div>
         <div class="posts">
-            <div class="grids">
-                {% for post in site.posts %}
-                <a class="grid" href="{{ post.url }}">
-                    <img src="{{ post.featured }}" class="grid-featured-image" alt="{{ post.featured }}">
-                    <h3 class="grid-title">{{ post.title }}</h3>
+            {% for post in site.posts %}
+            <div class="post">
+                <a class="title" href="{{ post.url }}">
+                    <h1>{{ post.title }}</h1>
+                    <div class="date">Posted in {{ post.date }}</div>
                 </a> 
-                {% endfor %}
+                <div class="excerpt">
+                    <img class="featured" src="{{ post.featured }}">
+                    <div class="actual-excerpt">
+                        {{ post.content | strip_html | truncate: 500 }}
+                        <a href="{{ post.url }}">continue reading</a>
+                    </div>
+                    
+                </div>
             </div>
+            {% endfor %}
         </div>
         {% include footer.html %}
     </div>
-    <script src="/js/zdog.dist.min.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/logo.js"></script>
 </body>
-</html>

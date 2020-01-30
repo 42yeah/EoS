@@ -1,0 +1,27 @@
+---
+---
+
+{% include header.html %}
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <canvas id="logo" class="fill-up"></canvas>
+        </div>
+        {% include bar.html %}
+        <div class="posts">
+            <div class="grids">
+                {% for post in site.posts %}
+                <a class="grid" href="{{ post.url }}">
+                    <img src="{{ post.featured }}" class="grid-featured-image" alt="{{ post.featured }}">
+                    <h3 class="grid-title">{{ post.title }}</h3>
+                </a> 
+                {% endfor %}
+            </div>
+        </div>
+        {% include footer.html %}
+    </div>
+    <script src="/js/zdog.dist.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/logo.js"></script>
+</body>
+</html>

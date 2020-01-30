@@ -315,3 +315,31 @@ img {
     width: 100%;
     height: 100%;
 }
+
+/* === RESPONSIVE STUFFS === */
+@media screen and (max-width: 850px) {
+    .centerify-container {
+        padding: 2em 5%;
+    }
+
+    .excerpt .featured {
+        display: none;
+    }
+
+    .actual-excerpt {
+        margin: 1.5em 0;
+    }
+
+    .excerpt {
+        display: unset;
+        font-family: "cmunrm", "Times New Roman", Times, "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+        margin: 1em 0;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .centerify-container {
+        padding: 2em 10%;
+    }
+}

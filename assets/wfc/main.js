@@ -63,12 +63,10 @@ function event(e) {
         case "mousedown":
         case "touchstart":
             clicking = true;
-            console.log("STARTING");
             break;
 
         case "mouseup":
         case "touchend":
-            console.log("END");
             clicking = false;
             break;        
     }

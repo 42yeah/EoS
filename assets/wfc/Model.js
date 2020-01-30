@@ -51,6 +51,7 @@ class Model {
                 }
             }
         }
+        console.log(this);
     }
 
     at(pos) {

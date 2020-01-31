@@ -195,6 +195,38 @@ img {
     padding-right: 1em;
 }
 
+.slider {
+    -webkit-appearance: none;
+    background-color: #fae6bb;
+    transition: 0.1s;
+    opacity: 0.8;
+    position: relative;
+    border-radius: 1em;
+    border: 1px solid transparent;
+    margin: 0.3em 0;
+}
+
+.slider:hover {
+    opacity: 1.0;
+    border: 1px solid transparent;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #ffa42c;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    transition: 0.1s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background-color: #fc8f00;
+}
+
+.slider::-webkit-slider-thumb:active {
+    background-color: #c26e00;
+}
 
 /* === CODE === */
 .highlight .hll { background-color: #ffffcc }

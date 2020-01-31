@@ -25,6 +25,12 @@
     src: url(/assets/cmunbtl.ttf);
 }
 
+@font-face {
+    font-family: "cmunbtl";
+    font-style: italic;
+    src: url(/assets/cmunbto.ttf);
+}
+
 pre, code {
     font-family: "cmunbtl", 'Courier New', Courier, monospace;
 }
@@ -146,10 +152,11 @@ img {
 .featured {
     max-width: 50%;
     max-height: 50%;
+    margin: 0;
 }
 
 .actual-excerpt {
-    margin: 0 0.8em;
+    margin: 0 1.0em;
     font-family: "cmunrm", "Times New Roman", Times, "PingFang SC", "Microsoft YaHei", "SimSun", serif;
 }
 
@@ -159,7 +166,7 @@ img {
 }
 
 .article {
-    margin-top: 5em;
+    margin-top: 3em;
 }
 
 .article .featured {

@@ -80,9 +80,9 @@ Shell sort is an improved version of insertion sort made famous by [Donald Shell
 
 <a href="javascript:void(0)" t="shell" class="sorti">sort it</a> \| <a href="javascript:void(0)" t="shell" class="mixi">mix it</a>
 
-So, as we can see here, the first gap is ten: that means the whole array was splitted into ten subarrays, each subarray has two element. We then semi-bubble sort it. Then the gap is five: it was splitted into five subarrays, each with four element. Then two, each with ten elements. Finally, it was __devolved__ into one subarray, which has 20 elements, and became our dear Bubble sort.
+So, as we can see here, the first gap is ten: that means the whole array was splitted into ten subarrays, each subarray has two element. We then semi-bubble sort it. Then the gap is five: it was splitted into five subarrays, each with four element. Then two, each with ten elements. Finally, it was __devolved__ into one giant subarray, which has 20 elements, and became our dear Bubble sort.
 
-In fact, Shell sort's consideration works similar: it means for each gap, which in turn means each gapth element, its order will be correct. So at first every 10th element will be in correct order; then every 5th element will be in correct order; then every 2nd element; and finally, every element will be in correct order. As the gap is really big at first, the overall disorder will go down, so the bubble sort at the end will have a better day.
+In fact, Shell sort works just like a gapped Bubble sort: it means for each gap, which in turn means each gapth element, its order will be correct. So at first every 10th element will be in correct order; then every 5th element will be in correct order; then every 2nd element; and finally, every element will be in correct order. As the gap is really big at first, the overall disorder will go down, so the bubble sort at the end will have a better day.
 
 The gap sequence is critical in Shell sort. Shell himself originally uses $$[\frac{N}{2^k}]$$, but there are lots of variants since then. Hop to the [wiki page](https://en.wikipedia.org/wiki/Shellsort#Gap_sequences) if you wanna know more.
 

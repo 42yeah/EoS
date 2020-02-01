@@ -44,7 +44,7 @@ Now that the Bubble sort is done, on to the next sorting algorithm: Insertion so
 
 ## Insertion sort
 
-Insertion sort looks a lot like when you play poker, or majhong, or any kind of card games. When you are reassigning your hand, you will pick the smallest card in your hand, and put it to the leftest side; then you will pick the second smallest card, and put it to the second leftest side. And the third, and the forth, ... You get what I mean. However, instead of just put it there, insertion sort chooses the old swap. Because in reality, _inserting_ the item over there means all other items should be pushed back by one, and it would mean another iteration, which would really slow down the algorithm:
+Insertion sort looks a lot like when you play poker, or majhong, or any kind of card games. When you are reassigning your hand, you will pick the smallest card in your hand, and put it to the leftest side; then you will pick the second smallest card, and put it to the second leftest side. And the third, and the forth, ... You get what I mean. However, instead of just put it there, insertion sort chooses the old swap. Because in reality, _inserting_ the item over there means all other items should be pushed back by one, and it would mean another iteration, which would really slow down the algorithm. So here's how it actually works:
 
 ![Insertion sort](/assets/asos/insertion.jpg)
 

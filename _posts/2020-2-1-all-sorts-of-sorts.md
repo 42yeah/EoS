@@ -316,7 +316,7 @@ Also, I am quite aware that the code here could be optimized. A lot of my code c
 
 ## Radix sort
 
-After the little hoopla, let's take a look at this brilliant sorting algorithm that requires __no comparison at all__: Radix sort! Also called Bucket sort, has a worst case performance of $$O(w\times n)$$. That's really low! But of course such brilliant algorithms usually comes with a downside. Well, for one, Radix sort really can't sort out irrational numbers. A simple example will be enough to walk you through.
+After the little hoopla, let's take a look at this brilliant sorting algorithm that requires __no comparison at all__: Radix sort! Also called Bucket sort, has a worst case performance of $$O(w\times n)$$. Now that's really low! But of course such brilliant algorithms usually comes with a downside. Well, for one, Radix sort really can't sort out irrational numbers. A simple example will be enough to walk you through.
 
 ![Radix sort](/assets/asos/radix.jpg)
 

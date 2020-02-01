@@ -25,7 +25,7 @@ Bubble sort is a very simple sorting algorithm. However the price of being simpl
 
 <a href="javascript:void(0)" t="bubble" class="sorti">sort it</a> \| <a href="javascript:void(0)" t="bubble" class="mixi">mix it</a>
 
-Alright, this is really simple, isn't it? This beautiful simplicity, together with horrible average/worst-case complexity, makes Bubble sort an impractical sorting algorithm, however really nice to watch. Implementing it is also extremely easy:
+Alright, this is really simple, isn't it? This beautiful simplicity, together with horrible average/worst-case complexity, makes Bubble sort an impractical sorting algorithm, despite being really nice to watch. Implementing it is also extremely easy:
 
 ```c++
 for (int i = 0; i < array.size() - 1; i++) {

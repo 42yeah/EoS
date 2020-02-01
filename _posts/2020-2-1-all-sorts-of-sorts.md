@@ -326,7 +326,7 @@ See why Radix sort does not have the ability to sort out irrational numbers now?
 2. Now we iterate through the _bucket array_'s non-empty indexes, and we look at the second least significant bit. We again put them into another _bucket array_. 123 goes to array[2], 50 goes to array[5]. 127 also goes to array[2]. Now remember we are __iterating__ through it, so the 123 will go to array[2] first: 127 will __follow__ 123. Now this is how the orderness of raidx sort comes.
 3. Finally we iterate through this new bucket array's non-empty indexes, and we look at the most significant bit (for those three example numbers). 123 goes to array[1], 50 goes to array[0] (0 had been prepended in front of 50: now it's __0__50). 127 also goes to array[1]. Again, the order does not change.
 
-If you did not find this convincing, take a paper and draw. You will notice how the order forms in Radix array, and how clever is the idea.
+If you did not find this convincing, take a paper and draw. You will notice how the order forms in Radix array, and how clever its idea is.
 
 ```c++
 bucket = {};

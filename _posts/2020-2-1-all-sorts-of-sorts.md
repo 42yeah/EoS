@@ -356,7 +356,7 @@ And that's Radix! Also my implementation might be a little bit wrong, as my memo
 
 Alright, and now I am getting tired. Let's take a look at the sorting algorithm's ultimate madness: Bogosort!
 
-You must've heard of it at some point in your life. The [_Infinite Monkey Theorem_](https://en.wikipedia.org/wiki/Infinite_monkey_theorem). It means if a monkey could just type randomly in the typewriter forever, there must be one day when it finally achieves to type out the whole William Shakespeare's masterpiece. So, if numbers would just switch randomly forever, there must be one day when they will be in correct order, right?
+You must've heard of it at some point in your life: [_The Infinite Monkey Theorem_](https://en.wikipedia.org/wiki/Infinite_monkey_theorem). It means if a monkey could just type randomly in the typewriter forever, there must be one day when it finally achieves to type out the whole William Shakespeare's masterpiece. So, if numbers would just switch randomly forever, there must be one day when they will be in correct order, right?
 
 <canvas t="bogo" class="sorts" width="500" height="500" style="width: 250px; height: 250px" n="10"></canvas>
 

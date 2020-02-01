@@ -152,7 +152,7 @@ quicksort(array, 0, array.size() - 1);
 
 ## Merge sort
 
-Merge sort comes right after Quicksort! They are all divide-and-conquer type, so I guess putting them together is legit. But if I remember correctly, my school didn't really teach me Merge sort. Well whatever, it isn't like I still remember any of them anyway, so here we go! Also it isn't really that hard, it's concept is really simple (ripped straight from [Wikipedia](https://en.wikipedia.org/wiki/File:Merge_sort_algorithm_diagram.svg)):
+Merge sort comes right after Quicksort! They are all divide-and-conquer type, so I guess putting them together is legit. But if I remember correctly, my school didn't really teach me Merge sort. Well whatever, it isn't like I still remember any of them anyway, so here we go! Also it isn't really that hard, as it's concept is really simple (ripped straight from [Wikipedia](https://en.wikipedia.org/wiki/File:Merge_sort_algorithm_diagram.svg)):
 
 ![Merge sort](/assets/asos/merge.png)
 

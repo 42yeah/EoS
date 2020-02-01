@@ -120,7 +120,7 @@ Until the array is splitted into those really, really small arrays, and impossib
 
 However, Quicksort has a slight defect: if the array is __already in order__ when the sorting started, that means the pivot point would always be the greatest (at least as is in my demo); which in turn means all elements will be iterated through for nothing, and here its performance will downgrade to $$O(n^2)$$. Which is ironic, because it is so good at sorting chaotic arrays.
 
-Quicksort has another downside that it uses stacks. In embedded systems, those might not be the richest available resources. That's why the quicksort implementation in embedded systems are actually Shell sort! Isn't that interesting?
+Quicksort has another downside that it uses stacks. In embedded systems, those might not be the richest available resources. That's why the quicksort implementation in embedded systems might actually be Shell sort! Isn't that interesting?
 
 ```c++
 function quicksort(array, lo, hi) {

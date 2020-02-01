@@ -320,7 +320,7 @@ After the little hoopla, let's take a look at this brilliant sorting algorithm t
 
 ![Radix sort](/assets/asos/radix.jpg)
 
-See why couldn't irrational numbers be sorted now? Because that would require a really really big array, and it didn't really make sense. Let's take a look at the procedures!
+See why Radix sort does not have the ability to sort out irrational numbers now? Because that would require a really really big array, and it didn't really make sense. Let's take a look at the procedures!
 
 1. So first we get all these numbers. We iterate through all of them, putting a number to an array with the index of their least significant bit, and we name this array _bucket array_. So 123 will go to array[3], and 50 will go to array[0], and 127 will go to array[7].
 2. Now we iterate through the _bucket array_'s non-empty indexes, and we look at the second least significant bit. We again put them into another _bucket array_. 123 goes to array[2], 50 goes to array[5]. 127 also goes to array[2]. Now remember we are __iterating__ through it, so the 123 will go to array[2] first: 127 will __follow__ 123. Now this is how the orderness of raidx sort comes.

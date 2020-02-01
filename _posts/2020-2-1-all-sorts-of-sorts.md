@@ -14,7 +14,7 @@ Alright! Because of this novel coronavirus thing, I am still getting cooped up i
 
 ## Introduction
 
-You must've watched those YouTube videos, in which you can hear those sorting sounds, and those ramps being sorted, right? If you didn't, [there's one here](https://www.youtube.com/watch?v=kPRA0W1kECg&t=81s). Today (or spanning multiple days for me), we are going to go over all sorts of algorithms. Bubble sort, Insertion sort, Shell sort, Merge sort, Quicksort, Heapsort, you name it. And we will start the story, with a simple dimple Bubble sort.
+You must've watched those YouTube videos, in which you can hear those sorting sounds, and those ramps getting sorted, right? If you didn't, [there's one here](https://www.youtube.com/watch?v=kPRA0W1kECg&t=81s). Today (or spanning multiple days for me), we are going to go over all sorts of algorithms. Bubble sort, Insertion sort, Shell sort, Merge sort, Quicksort, Heapsort, you name it. And we will start the story, with a simple dimple Bubble sort.
 
 ## Bubble sort
 

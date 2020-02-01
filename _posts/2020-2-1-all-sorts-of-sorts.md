@@ -202,7 +202,7 @@ Well, the animation would look a little bit weird, because Heapsort itself consi
 3. Reconstruct the "perfect heap"
 4. Goto 2
 
-Yeah sorry, that was 4 parts. Well, but 2, 3, and 4 should be counted as one part. So what's a "perfect heap"? Well, that's just how I call it really. In [Wikipedia](https://en.wikipedia.org/wiki/Heapsort), this procedure was called "heapify", so I guess well, _tant pis_. Let's broke it down, anyway:
+Yeah sorry, that was 4 parts. Well, but 2, 3, and 4 should be counted as one part. So what's a "perfect heap"? Well, that's just how I call it really. In [Wikipedia](https://en.wikipedia.org/wiki/Heapsort), this procedure was called "heapify", and I guess well, _tant pis_. Let's broke it down, anyway:
 
 ![Heapify](/assets/asos/heap.jpg)
 
@@ -316,7 +316,7 @@ Also, I am quite aware that the code here could be optimized. A lot of my code c
 
 ## Radix sort
 
-After this little hoopla, let's take a look at this brilliant sorting algorithm that requires __no comparison at all__: Radix sort! Also called Bucket sort, has a worst case performance of $$O(w\times n)$$. That's really low! But of course such brilliant algorithms usually comes with a downside. Well, for one, Radix sort really can't sort out irrational numbers. A simple example will be enough to walk you through.
+After the little hoopla, let's take a look at this brilliant sorting algorithm that requires __no comparison at all__: Radix sort! Also called Bucket sort, has a worst case performance of $$O(w\times n)$$. That's really low! But of course such brilliant algorithms usually comes with a downside. Well, for one, Radix sort really can't sort out irrational numbers. A simple example will be enough to walk you through.
 
 ![Radix sort](/assets/asos/radix.jpg)
 

@@ -53,7 +53,7 @@ Anyway, here's where the charm of the Perlin Noise lies: consistency. It does no
 
 ### White Noise
 
-Before implementing Perlin Noise, we should know how to implement [white noise](https://en.wikipedia.org/wiki/White_noise). And how exactly are we going to do that, especially in environments lack of the element of randomness, such as fragment shader? [You could go learn about it here.](https://thebookofshaders.com/10/). In fact, that link also contains Perlin Noise, so you could just skip to there and done with it. I am however, gonna steal image from it (again):
+Before implementing Perlin Noise, we should know how to implement [white noise](https://en.wikipedia.org/wiki/White_noise). And how exactly are we going to do that, especially in environments lack of the element of randomness, such as fragment shaders? [You could go learn about it here.](https://thebookofshaders.com/10/). In fact, that link also contains Perlin Noise, so you could just skip to there and be done with it. I am however, gonna steal image from it (again):
 
 ![y = fract(sin(x)*1.0);](/assets/perlin/fractsin.png)
 

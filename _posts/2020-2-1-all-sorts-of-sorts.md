@@ -382,3 +382,4 @@ Well, that's a lot of sorting algorithms! There are more, more sorting algorithm
 10. [Radix sort \| Wikipedia](https://en.wikipedia.org/wiki/Radix_sort)
 11. [Bogosort \| Wikipedia](https://en.wikipedia.org/wiki/Bogosort) Alright, that's a lot of Wikipedia entries!
 12. [the Sorting Algorithm page on Wikipedia](https://en.wikipedia.org/wiki/Sorting_algorithm) Yeah, this is gonna be the last one.
+13. [Scripts & Stuffs from this post](https://github.com/42yeah/EoS/tree/master/assets/asos) So if you are interested, you can go over there and have a look.

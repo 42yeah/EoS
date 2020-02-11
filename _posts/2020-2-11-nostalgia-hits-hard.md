@@ -12,7 +12,7 @@ It was a time when I have far worse English (compared to now), and everything is
 
 So after I woke up from the dream, instead of letting it go, I searched around the Internet and found [this](https://www.theodysseyonline.com/what-to-do-when-nostalgia-hits-hard), and it tells me to embrace it. I thought about the high school life, for a moment, and it feels like I was there. There are girls who I have a crush on, girls who have a crush on me (really?), all sorts of obviously-unhygenic-but-delicious restaurants, and of course, friends. I guess high school is nice for me because I am not bullied, and things tend to go my way. It feels good to make some true friends in high school. And I love you guys! Well, they probably won't be able to know I wrote this anyway; they don't even know I have a blog.
 
-Confession done! Well, to be fair, if I could live in high school again, I will note to myself that I should really focus on mathematics. Then I guess I could end up in a better university! Even though ending in this university is already kinda sorta miracle for me.
+Alrighty, confession done! Well, to be fair, if I could live in high school again, I will note to myself that I should really focus on mathematics. Then I guess I could end up in a better university! Even though ending in this university is already kinda sorta miracle for me.
 
 ## References
 

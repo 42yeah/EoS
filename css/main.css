@@ -377,6 +377,10 @@ img {
 
 /* === RESPONSIVE STUFFS === */
 @media screen and (max-width: 850px) {
+    img {
+        margin: 1em 0;
+    }
+
     .centerify-container {
         padding: 2em 5%;
     }

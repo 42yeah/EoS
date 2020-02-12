@@ -185,3 +185,4 @@ We saw Mandelbrot today, the beauty of maths. It's a graph plotted by numbers th
 4. [Fractal, The Book of Shaders (unfinished)](https://thebookofshaders.com/14/)
 5. [Fractal, Wikipedia](https://en.wikipedia.org/wiki/Fractal)
 6. [Mandelbrot - Distance, Inigo Quilez](https://www.shadertoy.com/view/lsX3W4)
+7. [Fractals are typically not self similar, 3Blue1Brown](https://www.youtube.com/watch?v=gB9n2gHsHN4)

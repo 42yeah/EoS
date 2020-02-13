@@ -209,14 +209,20 @@ for (int y = -1; y <= 1; y++) {
 vec3 color = vec3(rand(mPos), 1.0); // use rand so the color does not go out of bound
                                     // and set B=1.0 so the screenshot looks samsungy
 
+color -= abs(sin(m * 80.0)) * 0.01; // This line shows the isoline
+
 gl_FragColor = vec4(
     color,
     1.0);
 ```
 
+This is what it looks like without isoline: (Oooh, Samsung Galaxy something!)
+
 ![Samsungy](/assets/worley/samsungy.png)
 
-Then we subtract the output color by abs(sin(distance to the point * n)) * k. tweak the n for the stripe count you want, and tweak k for the stripe obviousness. And when you set k = 1, and zoom level = 2.0 or something, you will get a cool looking neon effect! That's exactly how I get the featured image. Also lower the zoom level. 
+Then we subtract the output color by abs(sin(distance to the point * n)) * k. tweak the n for the stripe count you want, and tweak k for the stripe obviousness. And when you set k = 1, and zoom level = 2.0 or something, you will get a cool looking neon effect! That's exactly how I get the featured image. Also lower the zoom level. This is what it looks like with isoline:
+
+![Contoury](/assets/worley/contoury.png)
 
 ### Animation
 

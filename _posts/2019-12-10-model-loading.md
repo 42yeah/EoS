@@ -83,13 +83,13 @@ for (int j = 0; j < mesh.indices.size(); j++) {
         attributes.vertices[i.vertex_index * 3 + 2]
     };
     glm::vec3 normal = {
-        attributes.vertices[i.normal_index * 3],
-        attributes.vertices[i.normal_index * 3 + 1],
-        attributes.vertices[i.normal_index * 3 + 2]
+        attributes.normals[i.normal_index * 3],
+        attributes.normals[i.normal_index * 3 + 1],
+        attributes.normals[i.normal_index * 3 + 2]
     };
     glm::vec2 texCoord = {
-        attributes.vertices[i.texcoord_index * 2],
-        attributes.vertices[i.texcoord_index * 2 + 1],
+        attributes.texcoords[i.texcoord_index * 2],
+        attributes.texcoords[i.texcoord_index * 2 + 1],
     };
     // Not gonna care about texCoord right now.
     Vertex vert = { position, normal, texCoord };

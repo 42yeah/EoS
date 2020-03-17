@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Let's Ray Frickin' March!
+title: Let's Ray March!
 featured: /assets/Mist-by-Ohno-OctaHydra-Flopine.png
 ---
 

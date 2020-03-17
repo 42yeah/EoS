@@ -15,20 +15,31 @@
     <script src="/js/blog.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h2><a href="/">Frame of <b>4</b>2yeah</a></h2>
-        {% include bar.html %}
+    <div class="centerify-container">
+        <div class="header">{{ page.title }}</div>
+        <div class="subheader"><a href="/">&lt;&lt; Home</a></div>
         <div class="article">
             <img src="{{ page.featured }}" class="featured">
             <div class="actual-content">
-                <h1>{{ page.title }}</h1>
-                <div id="googleTranslate"></div>
+                <h1>{{ page.title }} <!-- <div id="googleTranslate"></div> --></h1>
                 {{ content }}
             </div>
+        </div>
+        <div class="next">
+            {% if page.previous.url %}
+            <div class="next__item">
+                <a href="{{ page.previous.url }}">Prev: {{ page.previous.title }}</a>
+            </div>
+            {% endif %}
+            {% if page.next.url %}
+            <div class="next__item">
+                <a href="{{ page.next.url }}">Next: {{ page.next.title }}</a>
+            </div>
+            {% endif %}
         </div>
         {% include footer.html %}
     </div>
     <script src="/js/codemirror.js"></script>
     <script src="/js/javascript/javascript.js"></script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=initGoogleTranslation"></script>
+    <!-- <script src="https://translate.google.com/translate_a/element.js?cb=initGoogleTranslation"></script> -->
 </body>

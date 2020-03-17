@@ -1,7 +1,7 @@
 ---
 layout: post
 title: macOS Signing Problem
-featured: /assets/cytonn-photography-GJao3ZTX9gU-unsplash.jpg
+featured:
 ---
 
 > not valid for use in process using Library Validation: mapped file has no cdhash, completely unsigned? Code has to be at least ad-hoc signed.

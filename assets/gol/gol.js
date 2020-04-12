@@ -73,7 +73,8 @@ function mouseEvents(e) {
         case "mousedown": recording = true; break;
         case "mouseup": recording = false; break;
     }
-    if (!recording) { return; }
+    if (!recording && e.type != "touchmove") { return; }
+    if (e.touches) { e.clientX = e.touches[0].clientX; e.clientY = e.touches[0].clientY; }
     let boundingRect = canvas.getBoundingClientRect();
     let mousePos = { x: (e.clientX - boundingRect.left) * retina + offset.x, 
                      y: (e.clientY - boundingRect.top) * retina + offset.y };
@@ -164,6 +165,9 @@ window.addEventListener("load", () => {
     canvas.addEventListener("mousedown", mouseEvents);
     canvas.addEventListener("mousemove", mouseEvents);
     canvas.addEventListener("mouseup", mouseEvents);
+    canvas.addEventListener("touchdown", mouseEvents);
+    canvas.addEventListener("touchmove", mouseEvents);
+    canvas.addEventListener("touchup", mouseEvents);
     ctx = canvas.getContext("2d");
     requestAnimationFrame(loop);
 });

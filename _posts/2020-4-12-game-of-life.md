@@ -23,7 +23,7 @@ If this still sounds a little bit ambiguous to you, let's play with it for a lit
 
 ## Play With It
 
-<canvas id="gol" width="500" height="500" style="width: 250px; height: 250px"></canvas>
+<canvas id="gol" width="500" height="500" style="width: 250px; height: 250px; touch-action: none"></canvas>
 <script src="/assets/gol/gol.js"></script>
 
 <div style="display: flex; align-items: center">

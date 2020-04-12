@@ -186,3 +186,4 @@ This is an easy algorithm, and I am just writing this to honor John Conway. He i
 3. [Does Conway Hates Game of Life?, YouTube](https://www.youtube.com/watch?v=E8kUJL04ELA)
 4. [LifeWiki](https://conwaylife.com/)
 5. [John Horton Conway, Wikipedia](https://en.wikipedia.org/wiki/John_Horton_Conway)
+6. [The demo's source tree (something might be different)](https://github.com/42yeah/EoS/tree/master/assets/gol)

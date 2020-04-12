@@ -14,7 +14,7 @@
                     <div class="date">Posted in {{ post.date }}</div>
                 </a> 
                 <div class="excerpt">
-                    <img class="featured" src="{{ post.featured }}">
+                    <img class="featured" lsrc="{{ post.featured }}">
                     <div class="actual-excerpt">
                         {{ post.content | strip_html | truncate: 500 }}
                         <a href="{{ post.url }}">continue reading</a>

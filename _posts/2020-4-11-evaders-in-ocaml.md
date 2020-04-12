@@ -535,6 +535,8 @@ let _ =
   Gc.compact ()
 ```
 
+The full source repository is [here](https://github.com/42yeah/Evaders.OCaml). You can check it out if you want.
+
 ## Conclusion
 
 You might notice there are quite a few differences, as I've changed a lot of things on the flight. If there aren't, lucky me! 
@@ -549,3 +551,4 @@ OCaml is a very beautiful and elegant language. I am sorry I abused it in such a
 4. [Dune, A Composable Build System For OCaml](https://github.com/ocaml/dune)
 5. [Game Programming Patterns, Robert Nystorm](https://gameprogrammingpatterns.com)
 6. [SDL, Simple Directmedia Layer](https://www.libsdl.org/)
+7. [Full GitHub source code](https://github.com/42yeah/Evaders.OCaml)

@@ -1,11 +1,17 @@
-function adjustImageAspect() {
-    let images = document.querySelectorAll("img");
-    for (let i = 0; i < images.length; i++) {
-        const image = images[i];
-        const aspect = image.naturalWidth / image.naturalHeight;
-        const flooredPercent = Math.max(100, Math.floor(aspect * 100));
-        image.style.width = flooredPercent + "%";
-    }
+function addGoogleAnalytics() {
+    let script = document.createElement("script");
+    script.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=UA-147744221-1");
+    document.head.appendChild(script);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-147744221-1');
 }
 
-window.addEventListener("load", adjustImageAspect);
+window.addEventListener("load", () => {
+    fetch("https://google.com", {
+        mode: "no-cors"
+    }).then(res => {
+        addGoogleAnalytics();
+    });
+});

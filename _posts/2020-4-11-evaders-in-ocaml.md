@@ -4,6 +4,8 @@ title: Writing an Evaders Game In OCaml With TSDL
 featured: /assets/bernice-tong-VPTSmbGba7Q-unsplash.jpg
 ---
 
+![Revenge](/assets/evaders/revenge.png)
+
 So, writing an _Evaders_ game in OCaml. Whenever I learn a new language, I will try to write a really basic game, which looks a little bit like Space Invaders, and I will implement it from scratch (apart from graphics libraries). So let's get started!
 
 ## Introduction
@@ -542,6 +544,16 @@ The full source repository is [here](https://github.com/42yeah/Evaders.OCaml). Y
 You might notice there are quite a few differences, as I've changed a lot of things on the flight. If there aren't, lucky me! 
 
 OCaml is a very beautiful and elegant language. I am sorry I abused it in such an ugly way. Truth is, I just started learning it, and that's why I need those little exercises. Another reason would be little to none documentation & community tutorials. But this is one cool hidden gem, and it is really, really cool! I hope I can really get the gist of it one day, and dive into a huge, diverse ML family.
+
+## What To Do Next?
+
+Well, this game is obviously incomlete, so here's a few thing you could improve:
+
+1. Make a GUI
+2. Ability to restart the game
+3. Turn the enemy planes around 180 degree
+4. Fancy shaders (or simply discard the black part)
+5. I don't know, multiplayer?
 
 ## References
 

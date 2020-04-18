@@ -99,6 +99,8 @@ function cacheMasiveList(handler) {
             console.log("Cached massive list, length: " + massiveList.length);
             handler();
         });
+
+    setTimeout(cacheMasiveList, 6000000, () => {});
 }
 
 function main() {

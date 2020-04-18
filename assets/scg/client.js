@@ -24,5 +24,7 @@ function submit() {
                 }
                 list.innerHTML = games;
             }
+
+            common.innerHTML = "You have " + json.common.length + " common games with this friend.";
         });
 }

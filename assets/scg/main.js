@@ -135,7 +135,7 @@ function main() {
     server.on("clientError", (err, socket) => {
         socket.end("HTTP/1.1 400 Bad Request\r\n\r\n");
     });
-    server.listen(41234);
+    server.listen(41234, "127.0.0.1");
 }
 
 cacheMasiveList(main);

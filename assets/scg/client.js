@@ -3,7 +3,7 @@ function submit() {
         a = document.querySelector("#a").value,
         b = document.querySelector("#b").value;
 
-    fetch("http://127.0.0.1:41234?key=" + key + "&a=" + a + "&b=" + b)
+    fetch("https://frame.42yeah.casa/steam_common.json?key=" + key + "&a=" + a + "&b=" + b)
         .then(res => {
             return res.json();
         })

@@ -30,7 +30,7 @@ Color: <input id="color" placeholder="#abcdef, or empty for random" style="width
 
 ## Implementation
 
-Well, it's not that hard, really. Just draw a circle and implement all sorts of physics stuffs. You can view the source tree here.
+Well, it's not that hard, really. Just draw a circle and implement all sorts of physics stuffs. You can view the source tree [here](https://github.com/42yeah/EoS/tree/master/assets/wof).
 
 ## Conclusion
 

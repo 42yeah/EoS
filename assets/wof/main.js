@@ -170,7 +170,8 @@ function mouse(e) {
         -(pos.clientY - rect.top) * 2.0 + (canvas.height / 2.0));
 
     const rad = correct(Math.atan(n.x / n.y), n);
-    if (e.type == "mousedown") {
+    if (e.type == "mousedown" || e.type == "touchstart") {
+        console.log("Start");
         startRadians = rad;
     }
     arrowRadians = currentRadians + (rad - startRadians);

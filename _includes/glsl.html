@@ -13,7 +13,10 @@
     <textarea>"use strict";</textarea>
     <canvas width="500px" height="500px" style="margin-left: 2em; width: 250px; height: 250px"></canvas>
 </div>
-<div><a class="run" href="javascript:void(0)">Run</a></div>
+<div>
+    <a class="run" href="javascript:void(0)">Run</a> |
+    Click on the canvas to toggle running. It is paused by default.
+</div>
 
 <script>
     (function () {
@@ -62,6 +65,15 @@
             return program;
         }
 
+        let running = false;
+        function toggleRunning() {
+            running = !running;
+            lastInstant = 0.0;
+            deltaTime = 0.0;
+            acc = 0.0;
+            requestAnimationFrame(render);
+        }
+
         let lastInstant = 0.0;
         let deltaTime = 0.0;
         let acc = 0.0;
@@ -70,7 +82,9 @@
             lastInstant = thisInstant;
             acc += deltaTime;
 
-            requestAnimationFrame(render);
+            if (running) {
+                requestAnimationFrame(render);
+            }
 
             gl.clear(gl.COLOR_BUFFER_BIT);
             gl.useProgram(program);
@@ -84,6 +98,9 @@
             program = setupProgram();
             aPosLoc = gl.getAttribLocation(program, "aPos");
             timeLoc = gl.getUniformLocation(program, "time");
+            if (!running) {
+                toggleRunning();
+            }
         }
 
         const me = document.currentScript;
@@ -104,6 +121,7 @@
             mode:    "glsl",
             indentUnit: 4
         });
+        canvas.addEventListener("click", toggleRunning);
         
         let program = setupProgram();
         let aPosLoc = gl.getAttribLocation(program, "aPos");

@@ -11,11 +11,14 @@
 
 <div class="glsl" data-type="code" style="display: flex; align-items: center;">
     <textarea>"use strict";</textarea>
-    <canvas width="500px" height="500px" style="margin-left: 2em; width: 250px; height: 250px"></canvas>
+    <canvas width="500px" height="500px" style="margin: 2em; width: 250px; height: 250px"></canvas>
 </div>
 <div>
     <a class="run" href="javascript:void(0)">Recompile</a> |
     Click on the canvas to toggle running. It is paused by default.
+</div>
+<div style="margin: 1em; color: #ff7700; font-family: 'cmunbtl', 'Courier New', Courier, monospace;">
+
 </div>
 
 <script>
@@ -40,12 +43,28 @@
             gl.shaderSource(shader, src);
             gl.compileShader(shader);
 
-            const err = gl.getShaderInfoLog(shader);
-            console.log(err);
+            let error = gl.getShaderInfoLog(shader);
+            if (error.length > 0) {
+                let lines = error.split("\n");
+                for (let i = 0; i < lines.length; i++) {
+                    let group = lines[i].split(":");
+                    if (group.length <= 2) { continue; }
+                    if (+group[2] != NaN) {
+                        let num = +group[2];
+                        num -= 5 + hiddenCode.split("\n").length;
+                        group[2] = "" + num;
+                        lines[i] = group.join(":");
+                    }
+                }
+                error = lines.join("<br />");
+                err.innerHTML += error + "<br />";
+            }
+            
             return shader;
         }
 
         function setupProgram() {
+            err.innerHTML = "";
             const program = gl.createProgram();
 
             const vertex = `#version 300 es
@@ -57,7 +76,12 @@
                 }
             `;
             
-            const fragment = codeMirror.getValue();
+            const fragment = `#version 300 es
+                precision mediump float;
+                in vec2 uv;
+                out vec4 color;
+                uniform float time;
+            ` + hiddenCode + "\n" + codeMirror.getValue();
             
             gl.attachShader(program, compileShader(gl.VERTEX_SHADER, vertex));
             gl.attachShader(program, compileShader(gl.FRAGMENT_SHADER, fragment));
@@ -104,7 +128,8 @@
         }
 
         const me = document.currentScript;
-        const canvas = me.previousElementSibling.previousElementSibling.firstElementChild.nextElementSibling;
+        const err = me.previousElementSibling;
+        const canvas = me.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.nextElementSibling;
         const gl = canvas.getContext("webgl2");
         const textArea = canvas.previousElementSibling;
         const initialCode = me.previousElementSibling
@@ -113,8 +138,12 @@
             .previousElementSibling
             .previousElementSibling
             .previousElementSibling
+            .previousElementSibling
             .previousElementSibling;
         textArea.value = "" + initialCode.innerText;
+        const hiddenCodeElem = initialCode.previousElementSibling;
+        const hiddenCode = hiddenCodeElem.innerText;
+        hiddenCodeElem.remove();
         initialCode.remove();
         const codeMirror = CodeMirror.fromTextArea(textArea, {
             value:   "",
@@ -136,7 +165,7 @@
 
         requestAnimationFrame(render);
 
-        const runButton = me.previousElementSibling.firstElementChild;
+        const runButton = me.previousElementSibling.previousElementSibling.firstElementChild;
         runButton.onclick = run;
     }());
 </script>

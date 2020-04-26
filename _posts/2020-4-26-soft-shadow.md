@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Soft Shadow in Raymarching
-featured:
+featured: /assets/ss/featured.png
 ---
 
 Shadow. The stuff that adds a great deal of realism to the scene. Thanks to the great people in Shadertoy's Discord server, I am finally able to understand how soft shadow works! So I am writing this down today.

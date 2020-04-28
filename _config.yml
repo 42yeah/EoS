@@ -24,7 +24,7 @@ email: 42yeah@gmx.fr
 description: >- # this means to ignore newlines until "baseurl:"
   Previously Frame of 42yeah, now it is still Frame of 42yeah! Surprise!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://frame.42yeah.casa" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: POTION4
 github_username:  42yeah
 

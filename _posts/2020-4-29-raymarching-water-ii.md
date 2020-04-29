@@ -928,7 +928,7 @@ void main() {
 
 ## That's All!
 
-That's all for now. Man, this is kinda like the biggest thing I've done since I started raymarching. I might not have explained everything clearly, because I don't understand everything, too; but it has been a very, very fun experience since I really love ocean! Even though I didn't really reach the level of [Seascape](https://www.shadertoy.com/view/Ms2SD1) (because that's so cool), I am working on it. So fingers crossed! 
+That's all for now. Man, this is kinda like the biggest thing I've done since I started raymarching. I might not have explained everything clearly, because I don't understand everything, either; but it has been a very, very fun experience since I really love ocean! Even though I didn't really reach the level of [Seascape](https://www.shadertoy.com/view/Ms2SD1) (because that's so cool), I am working on it. So fingers crossed! 
 
 ## Conclusion
 

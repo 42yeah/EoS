@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Raymarching Reflection
-featured:
+featured: /assets/reflection.png
 ---
 
 Reflection is quite important when you are projecting your ray onto shiny stuffs. Mirror, metal, loads of things that start with an m... You get the gist. So today, let's take a look at reflection! If you want to get pass my words and just go to shader, you can visit [shane's shader](https://www.shadertoy.com/view/4dt3zn). He writes perfect comments!

@@ -1284,19 +1284,17 @@ void main() {
     vec3 light = vec3(1.0);
     vec3 refl = vec3(0.0);
     
-    vec3 objColor = vec3(0.0);
+        vec3 objColor = vec3(0.0);
     if ((info.y > 0.0 && info.y < 1.0) || (info.y > 2.0)) {
-        // ground
         objColor = getColor(info.y, pos, rd) * getLight(pos, n, lightDir);
         objColor = pow(objColor, vec3(0.4545));
     } else if (info.y > 1.0 && info.y < 2.0) {
-        // block
         float fresnel = clamp(1.0 + dot(rd, n), 0.0, 1.0);
         vec3 reflected = reflect(rd, n);
         info = trace(pos + n * 1e-3, reflected);
         vec3 reflectedPos = pos + reflected * info.x;
         vec3 reflectedN = getNormal(reflectedPos);
-        if (info.y > 0.0 && info.y < 1.0) {
+        if ((info.y > 0.0 && info.y < 1.0) || (info.y > 2.0)) {
             light = getLight(pos, n, lightDir);
         }
         refl = getColor(info.y, reflectedPos, reflected) * light;
@@ -1314,7 +1312,7 @@ void main() {
         n = getNormalFinal(pos);
 
         light = vec3(1.0);
-        if (info.y > 0.0 && info.y < 1.0) {
+        if ((info.y > 0.0 && info.y < 1.0) || (info.y > 2.0)) {
             light = getLight(pos, n, lightDir);
         }
         
@@ -1322,7 +1320,6 @@ void main() {
         objColor = mix(refr, refl, pow(fresnel, 5.0) * 0.8 + 0.2);
         objColor = pow(objColor, vec3(0.4545));
     } else {
-        // sky
         objColor = getColor(info.y, pos, rd);
     }
 

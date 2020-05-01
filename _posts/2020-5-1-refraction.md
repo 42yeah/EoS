@@ -1334,6 +1334,10 @@ void main() {
 
 Well, isn't this great?
 
+## Conclusion
+
+Refraction comes to sine when you are working with transparent materials, such as waater, glass, et cetera. And when the refracted ray is guaranteed to hit the ground, you can simply use one refraction; otherwise, you should use two. Well, that's it!
+
 ## References
 
 1. [Abstract Water Tunnel, Shane, Shadertoy](https://www.shadertoy.com/view/MsScRD)

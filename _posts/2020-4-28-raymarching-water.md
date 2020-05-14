@@ -117,7 +117,7 @@ First, let's go back and take a good look at the seascape:
 
 ![Seascape](/assets/water/seascape.png)
 
-What makes it look real? It's the water details. It's basically water bumping around, with nice lighting. And that's why at first, we need to implement its basic water shape, which as we can see here, is clearly the work of [fBm](https://frame.42yeah.casa/2020/04/24/fbm.html), but the variant is not known. Well as a matter of fact, this isn't any variant we've see before all right; it's the result of sine and cosine. First, let's make wavey patterns in 1D. Take a look at this graph:
+What makes it look real? It's the water details. It's basically water bumping around, with nice lighting. And that's why at first, we need to implement its basic water shape, which as we can see here, is clearly the work of [fBm](https://frame.42yeah.me/2020/04/24/fbm.html), but the variant is not known. Well as a matter of fact, this isn't any variant we've see before all right; it's the result of sine and cosine. First, let's make wavey patterns in 1D. Take a look at this graph:
 
 ```glsl
 float absSin(vec2 uv);

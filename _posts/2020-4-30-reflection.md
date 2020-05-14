@@ -195,7 +195,7 @@ And first, we need to perform step __two__ of reflection calculation: reflecting
 rd = reflect(rd, n);
 ```
 
-Then, we need to trace it from [a smidge off sample point](https://frame.42yeah.casa/2020/04/26/soft-shadow.html) (because if you don't sample it from a smidge off the original sample point, it will just sample itself), along the new rd, and record what we've see. So, basically another raymarching. Also, I added lightDir for reflection lighting calculation.
+Then, we need to trace it from [a smidge off sample point](https://frame.42yeah.me/2020/04/26/soft-shadow.html) (because if you don't sample it from a smidge off the original sample point, it will just sample itself), along the new rd, and record what we've see. So, basically another raymarching. Also, I added lightDir for reflection lighting calculation.
 
 ```glsl
 vec3 getReflection(float id, vec3 pos, vec3 rd, vec3 n, vec3 lightDir) {

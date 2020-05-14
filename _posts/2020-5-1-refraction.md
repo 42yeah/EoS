@@ -10,7 +10,7 @@ Happy International Except America Labor Day! I will save the rest for September
 
 Refraction is like a twin sister to reflection (mostly), because ice, water, glass, and other stuffs I can't think of usually consists of both. GLSL has a `refract` function just like `reflect`, which is convenient, however it also accepts a parameter `eta`, which is used to controll the refractiness of a surface. You could look them up [here](http://hyperphysics.phy-astr.gsu.edu/hbase/Tables/indrf.html).
 
-Dispite they might not be the same, refraction looks pretty much like [reflection](http://frame.42yeah.casa/2020/04/30/reflection.html). Here's what we are going to do in raymarching when we reach a refractive surface:
+Dispite they might not be the same, refraction looks pretty much like [reflection](http://frame.42yeah.me/2020/04/30/reflection.html). Here's what we are going to do in raymarching when we reach a refractive surface:
 
 1. Raymarch as if nothing happened
 2. Get the normal of the object you hit, and refract your ray direction based on that
@@ -1340,5 +1340,5 @@ Refraction comes to sine when you are working with transparent materials, such a
 1. [Abstract Water Tunnel, Shane, Shadertoy](https://www.shadertoy.com/view/MsScRD)
 2. [Index of Refraction, HyperPhysics, Georgia State University](http://hyperphysics.phy-astr.gsu.edu/hbase/Tables/indrf.html)
 3. [Fresnel Equations, Wikipedia](https://en.wikipedia.org/wiki/Fresnel_equations)
-4. [Reflection, Frame of 42yeah (that's myself!)]([reflection](http://frame.42yeah.casa/2020/04/30/reflection.html))
+4. [Reflection, Frame of 42yeah (that's myself!)]([reflection](http://frame.42yeah.me/2020/04/30/reflection.html))
 5. [Empty Glass, mu6k, Shadertoy](https://www.shadertoy.com/view/4s2GDV)

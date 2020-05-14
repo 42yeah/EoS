@@ -4,7 +4,7 @@ title: Raymarching Water Body - Part II
 featured: /assets/water/part.2.png
 ---
 
-__WARNING:__ WebGL2 required! So if you are not using a PC with a better-than-below-average GPU, stuffs below might not work. Also, you might want to read [part I](https://frame.42yeah.casa/2020/04/28/raymarching-water.html) first.
+__WARNING:__ WebGL2 required! So if you are not using a PC with a better-than-below-average GPU, stuffs below might not work. Also, you might want to read [part I](https://frame.42yeah.me/2020/04/28/raymarching-water.html) first.
 
 ## Resumé
 

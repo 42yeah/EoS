@@ -137,7 +137,7 @@ void main(void)
 
 ![Looks like black sun](/assets/worley/black.sun.png)
 
-Well, remember our `rand` function? If not, check it out [here](https://frame.42yeah.casa/2020/01/31/perlin-noise.html). After tiling & generating, we could make sure all tiles always get a point located at somewhere. However, it doesn't look like the original Worley stuff again, because there is only one point left to compare; there is no way to get the position of other points!
+Well, remember our `rand` function? If not, check it out [here](https://frame.42yeah.me/2020/01/31/perlin-noise.html). After tiling & generating, we could make sure all tiles always get a point located at somewhere. However, it doesn't look like the original Worley stuff again, because there is only one point left to compare; there is no way to get the position of other points!
 
 ### Or is there?
 
@@ -268,4 +268,4 @@ Well, we are ending things here. I've truly learned some interesting effects tod
 2. [Voronoi Diagram. Wikipedia](https://en.wikipedia.org/wiki/Voronoi_diagram)
 3. [Chapter 12, The Book of Shaders](https://thebookofshaders.com/12/)
 4. [Worley Noise, Wikipedia](https://en.wikipedia.org/wiki/Worley_noise)
-5. [Perlin Noise, Frame of 42yeah (yep thats me!)](https://frame.42yeah.casa/2020/01/31/perlin-noise.html)
+5. [Perlin Noise, Frame of 42yeah (yep thats me!)](https://frame.42yeah.me/2020/01/31/perlin-noise.html)

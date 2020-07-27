@@ -1,0 +1,171 @@
+<link rel="stylesheet" href="/css/codemirror.css">
+<script src="/js/codemirror.js"></script>
+<script src="/js/glsl/glsl.js"></script>
+<style>
+    @media screen and (max-width: 600px) {
+        .glsl {
+            display: block !important;
+        }
+    }
+</style>
+
+<div class="glsl" data-type="code" style="display: flex; align-items: center;">
+    <textarea>"use strict";</textarea>
+    <canvas width="500px" height="500px" style="margin: 2em; width: 250px; height: 250px"></canvas>
+</div>
+<div>
+    <a class="run" href="javascript:void(0)">Recompile</a> |
+    Click on the canvas to toggle running. It is paused by default.
+</div>
+<div style="margin: 1em; color: #ff7700; font-family: 'cmunbtl', 'Courier New', Courier, monospace;">
+
+</div>
+
+<script>
+    (function () {
+        function setupPosition() {
+            const pos = [
+                -1.0, -1.0,
+                1.0, -1.0,
+                1.0, 1.0,
+                1.0, 1.0,
+                -1.0, 1.0,
+                -1.0, -1.0
+            ];
+            const positionBuffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(pos), gl.STATIC_DRAW);
+            return positionBuffer;
+        }
+
+        function compileShader(type, src) {
+            const shader = gl.createShader(type);
+            gl.shaderSource(shader, src);
+            gl.compileShader(shader);
+
+            let error = gl.getShaderInfoLog(shader);
+            if (error.length > 0) {
+                let lines = error.split("\n");
+                for (let i = 0; i < lines.length; i++) {
+                    let group = lines[i].split(":");
+                    if (group.length <= 2) { continue; }
+                    if (+group[2] != NaN) {
+                        let num = +group[2];
+                        num -= 5 + hiddenCode.split("\n").length;
+                        group[2] = "" + num;
+                        lines[i] = group.join(":");
+                    }
+                }
+                error = lines.join("<br />");
+                err.innerHTML += error + "<br />";
+            }
+            
+            return shader;
+        }
+
+        function setupProgram() {
+            err.innerHTML = "";
+            const program = gl.createProgram();
+
+            const vertex = `#version 300 es
+                in vec2 aPos;
+                out vec2 uv;
+                void main() {
+                    gl_Position = vec4(aPos, 0.0, 1.0);
+                    uv = aPos * 0.5 + 0.5;
+                }
+            `;
+            
+            const fragment = `#version 300 es
+                precision mediump float;
+                in vec2 uv;
+                out vec4 color;
+                uniform float time;
+            ` + hiddenCode + "\n" + codeMirror.getValue();
+            
+            gl.attachShader(program, compileShader(gl.VERTEX_SHADER, vertex));
+            gl.attachShader(program, compileShader(gl.FRAGMENT_SHADER, fragment));
+            gl.linkProgram(program);
+            return program;
+        }
+
+        let running = false;
+        function toggleRunning() {
+            running = !running;
+            lastInstant = 0.0;
+            deltaTime = 0.0;
+            acc = 0.0;
+            requestAnimationFrame(render);
+        }
+
+        let lastInstant = 0.0;
+        let deltaTime = 0.0;
+        let acc = 0.0;
+        function render(thisInstant) {
+            deltaTime = (thisInstant - lastInstant) * 0.001;
+            lastInstant = thisInstant;
+            acc += deltaTime;
+
+            if (running) {
+                requestAnimationFrame(render);
+            }
+
+            gl.clear(gl.COLOR_BUFFER_BIT);
+            gl.useProgram(program);
+            gl.uniform1f(timeLoc, acc);
+            gl.bindVertexArray(vao);
+            gl.drawArrays(gl.TRIANGLES, 0, 6);
+        }
+
+        function run() {
+            gl.deleteProgram(program);
+            program = setupProgram();
+            aPosLoc = gl.getAttribLocation(program, "aPos");
+            timeLoc = gl.getUniformLocation(program, "time");
+            if (!running) {
+                toggleRunning();
+            }
+        }
+
+        const me = document.currentScript;
+        const err = me.previousElementSibling;
+        const canvas = me.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.nextElementSibling;
+        const gl = canvas.getContext("webgl2");
+        const textArea = canvas.previousElementSibling;
+        const initialCode = me.previousElementSibling
+            .previousElementSibling
+            .previousElementSibling
+            .previousElementSibling
+            .previousElementSibling
+            .previousElementSibling
+            .previousElementSibling
+            .previousElementSibling;
+        textArea.value = "" + initialCode.innerText;
+        const hiddenCodeElem = initialCode.previousElementSibling;
+        const hiddenCode = hiddenCodeElem.innerText;
+        hiddenCodeElem.remove();
+        initialCode.remove();
+        const codeMirror = CodeMirror.fromTextArea(textArea, {
+            value:   "",
+            mode:    "glsl",
+            indentUnit: 4
+        });
+        canvas.addEventListener("click", toggleRunning);
+        
+        let program = setupProgram();
+        let aPosLoc = gl.getAttribLocation(program, "aPos");
+        let timeLoc = gl.getUniformLocation(program, "time");
+        const vao = gl.createVertexArray();
+        gl.bindVertexArray(vao);
+        setupPosition();
+        gl.enableVertexAttribArray(aPosLoc);
+        gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+
+        gl.clearColor(0.0, 0.0, 0.0, 1.0);
+
+        requestAnimationFrame(render);
+
+        const runButton = me.previousElementSibling.previousElementSibling.firstElementChild;
+        runButton.onclick = run;
+    }());
+</script>

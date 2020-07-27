@@ -5,7 +5,7 @@
 <body>
     <div class="centerify-container">
         <div class="header">Frame of 42yeah</div>
-        <div class="subheader">12.9898, 78.233</div>
+        <div class="subheader">Read a shader a day, (kinda) keeps the doctor away</div>
         <div class="posts">
             {% for post in site.posts %}
             <div class="post">
@@ -14,7 +14,7 @@
                     <div class="date">Posted in {{ post.date }}</div>
                 </a> 
                 <div class="excerpt">
-                    <img class="featured" src="{{ post.featured }}">
+                    <img class="featured" lsrc="{{ post.featured }}">
                     <div class="actual-excerpt">
                         {{ post.content | strip_html | truncate: 500 }}
                         <a href="{{ post.url }}">continue reading</a>
